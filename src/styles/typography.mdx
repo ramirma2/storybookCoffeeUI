@@ -1,0 +1,16 @@
+import {Meta, Typeset, Title } from '@storybook/addon-docs/blocks';
+import {typography} from './tokens';
+
+<Meta title="Styles/Typography"  />
+
+<Title>Typography </Title>
+
+
+**Font:** {typography.bodyFont.split(',')[0]}
+
+**Weigths:** {Object.entries(typography.weights).map(weight=> (weight[0] += `(${weight[1]})`)).join(', ')}
+
+<Typeset
+    fontSizes={Object.values(typography.fontSizes)}
+/>
+

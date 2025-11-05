@@ -1,0 +1,39 @@
+import { Meta, ColorPalette, ColorItem } from "@storybook/addon-docs/blocks";
+import { colors } from './tokens';
+
+
+<Meta title="Tokens/Colors" />
+
+<ColorPalette>
+    <ColorItem
+        title="Primary"
+        subtitle="Juniper"
+        colors={colors.primary['juniper']}
+    />
+    <ColorItem
+        title="Secondary"
+        subtitle="Antique-brass"
+        colors={colors.secondary['antique_brass']}
+    />
+    <ColorItem
+        title="Success"
+        subtitle="Norway"
+        colors={colors.success['norway']}
+    />
+    <ColorItem
+        title="Light"
+        subtitle="Merino"
+        colors={colors.light['merino']}
+    />
+    <ColorItem
+        title="Dark"
+        subtitle="Mondo"
+        colors={colors.dark['mondo']}
+    />
+    <ColorItem
+        title="Danger"
+        subtitle="Red-berry"
+        colors={colors.danger['red_berry']}
+    />
+    
+</ColorPalette>

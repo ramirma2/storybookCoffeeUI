@@ -1,0 +1,31 @@
+import { Meta, Title, Controls, Canvas, Story} from "@storybook/addon-docs/blocks";
+import * as InputStories from './Input.stories';
+
+<Meta of={InputStories} />
+
+<Title> Input Field </Title>
+
+
+The **Input** component allows users to enter text or data. It supports various types such as text, password, email, and number.
+
+Use it in forms, search bars, and other text-entry contexts.
+
+## Example
+<Canvas>
+<Story />
+</Canvas>
+
+## Props 
+<Controls/>
+
+## States
+
+### Error State
+<Story  of={InputStories.ErrorState} />
+
+## Accessibility
+
+- Always provide a visible or accessible label (`aria-label` or `<label>`).
+- Ensure error messages are programmatically associated with the input via `aria-describedby`.
+- Use semantic `type` attributes (e.g., `email`, `password`, `number`) for better browser behavior.
+

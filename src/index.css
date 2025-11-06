@@ -134,6 +134,18 @@
     font-size: var(--font-fontSizes-base);
     font-style:italic;
   }
+  .input-error input{
+    border-bottom: 2px solid var(--colors-danger-red_berry-800);
+  }
+  .error-message{
+    color: var(--colors-danger-red_berry-800);
+    font-size: var(--font-fontSizes-small);
+    margin-top: var(--spacing-xs);
+    display: block;
+  }
+  .disabled{
+    cursor: not-allowed;
+  }
 }
 
 @layer components{

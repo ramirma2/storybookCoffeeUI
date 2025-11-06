@@ -4,9 +4,17 @@ export const Input = ({
     placeholder,
     required,
     disabled,
-    ...props})=>{
+    error,
+    ...props})=> {
+
+    let inputClassName = "input";
+    if(error){
+        inputClassName +=" input-error";
+    }else if(disabled){
+        inputClassName +=" disabled";
+    }
     return(
-        <div>
+        <div className={inputClassName}>
             <label>
                 {label}
             </label>
@@ -18,6 +26,9 @@ export const Input = ({
             required={required}
             {...props}
              />
+             <div>
+                {error && <span className="error-message">This field is required.</span>}
+             </div>
         </div>
     )
 }

@@ -1,7 +1,7 @@
 import {Input} from "./Input";
 
 const meta = {
-    title : 'Input',
+    title : 'Components/Input',
     component: Input,
     args:{
         label: 'Input Label',
@@ -9,6 +9,7 @@ const meta = {
         placeholder: 'Enter text here',
         required: false,
         disabled: false,
+        error:false
     },
     argTypes:{
         type:{
@@ -20,7 +21,15 @@ const meta = {
 
 export default meta;
 
-export const TextInput = {
+export const Default = {
+    args:{
+        type: 'text',
+        placeholder: 'Sign up for rewards',
+        label: 'Email',
+    }
+}
+
+export const ErrorState = {
     args:{
         type: 'text',
         placeholder: 'Sign up for rewards',

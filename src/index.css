@@ -118,9 +118,8 @@
   input{
     margin-left: var(--spacing-sm);
     padding: var(--spacing-md) var(--spacing-sm) var(--spacing-xs) var(--spacing-sm);
-    /* border: 1px solid var(--colors-stone); */
     border:none;
-    border-bottom: 2px solid var(--colors-dark-lightestdark);
+    border-bottom: 2px solid var(--colors-dark-mondo-lightestdark);
     outline:none;
     font-size: var(--font-fontSizes-base);
     background-color: transparent;
@@ -160,6 +159,13 @@
     size: var(--font-fontSizes-small);
     margin-top: var(--spacing-xs);
     font-weight: var(--font-weights-light);
+  }
+
+  .card .card-header{
+    padding-right: var(--spacing-md);
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
   }
 
   /* Navigation */

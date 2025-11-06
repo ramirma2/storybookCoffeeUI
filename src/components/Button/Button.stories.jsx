@@ -28,7 +28,6 @@ export default meta;
 export const Primary = {
     args: {
         variant: 'primary',
-
         children: 'Order Now'
     }
 };

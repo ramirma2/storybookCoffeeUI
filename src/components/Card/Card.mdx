@@ -1,3 +1,41 @@
-import{ Meta, Title, Stories} from "@storybook/blocks";
- 
+import { Meta, Title, Stories, Story, Controls, Canvas } from "@storybook/addon-docs/blocks";
+
+import * as CardStories from './Card.stories';
+
+<Meta of={CardStories} />
+
+<Title>Product Card</Title>
+
+The **Product Card** displays key information about a product — typically an image, title, and short description.  
+
+## When to Use
+
+- To showcase a single product in a catalog or collection view.  
+- To provide a quick preview before navigating to a detailed product page.  
+- When you need a consistent layout for displaying multiple products.
+
+<Controls/>
+
+---
+
+## Examples
+
+
+### Default
+
+<Canvas>
+    <Story of={CardStories.Default} />
+</Canvas>
+
+### Longer description
+
+<Canvas>
+    <Story of={CardStories.LongDescription} />
+</Canvas>
+
+### No image
+
+<Canvas>
+    <Story of={CardStories.NoImage} />   
+</Canvas>
 

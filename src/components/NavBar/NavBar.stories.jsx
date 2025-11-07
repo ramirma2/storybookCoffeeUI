@@ -1,18 +1,52 @@
 import {NavBar} from "./NavBar";
 
 const meta = {
-    title: 'NavBar',
+    title: 'Components/NavBar',
     component: NavBar,
     parameters: {
     layout: 'fullscreen', 
-  },
+    },
+    args:{
+        brandName : 'Kafe',
+        mobileView: { isMobile: false, menuOpen: false },
+    },
+    argTypes:{
+    //     mobileView: {
+    //   table: { disable: true },
+    //   control: false,
+    // },
+    }
+
 }
 
 export default meta;
 
-export const PrimaryNavBar = {
+export const Default = {}
+
+export const MobileView = {
     args:{
-        brandName : 'Kafe'
-    }
+        mobileView:{ 
+            isMobile: true,
+            menuOpen:false
+        }
+    },
+    parameters: {
+        viewport: {
+            defaultViewport: 'iphone12',
+        },
+    },
 }
 
+export const MobileViewMenuOpen = {
+  args: {
+    mobileView: { 
+      isMobile: true,
+      menuOpen: true,
+    },
+  },
+  parameters: {
+    viewport: {
+      defaultViewport: 'iphone12',
+    },
+  },
+}

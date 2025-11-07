@@ -34,5 +34,7 @@ export const ErrorState = {
         type: 'text',
         placeholder: 'Sign up for rewards',
         label: 'Email',
+        required: true,
+        error: true,
     }
 }

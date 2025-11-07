@@ -8,9 +8,8 @@ export const Input = ({
     ...props})=> {
 
     let inputClassName = "input";
-    if(error){
-        inputClassName +=" input-error";
-    }else if(disabled){
+    let idError = "required-field";
+    if(disabled){
         inputClassName +=" disabled";
     }
     return(
@@ -24,10 +23,12 @@ export const Input = ({
             placeholder={placeholder}
             disabled={disabled}
             required={required}
+            aria-invalid={!!error}
+            aria-describedby={error ? idError : undefined}
             {...props}
              />
              <div>
-                {error && <span className="error-message">This field is required.</span>}
+                {error && <p id={idError} className="error-message">This field is required.</p>}
              </div>
         </div>
     )

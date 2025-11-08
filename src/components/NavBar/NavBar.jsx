@@ -1,4 +1,6 @@
 import './NavBar.css'
+import { Menu, X } from 'lucide-react';
+
 
 export const NavBar = ({
     brandName,
@@ -10,7 +12,11 @@ export const NavBar = ({
         <nav 
         className={navClass}
         {...props}>
+            <div className='nav_header'>
+                {mobileView.isMobile ?
+                    mobileView.menuOpen ? <X /> : <Menu size={24} className='menu_icon'/> : null}
                 <h1>{brandName.toUpperCase()}</h1>
+            </div>
             <ul className={menuClass}>
                 <li>Home</li>
                 <li>Menu</li>

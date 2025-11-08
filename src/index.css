@@ -193,6 +193,7 @@
     display: flex;
     width: 55%;
     justify-content: space-between;    
+    align-items: flex-end;
     margin:0px;
     padding-bottom: var(--spacing-sm);
   }
@@ -243,6 +244,13 @@
   /* Buttons Variant: outline */
   .button-destructive{
     background-color: var(--colors-danger-red_berry-800);
+  }
+
+  .menu-icon{
+    display:absolute;
+    top:0;
+    left: 0;
+    cursor: pointer;
   }
 }
 

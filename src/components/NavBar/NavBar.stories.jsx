@@ -11,10 +11,10 @@ const meta = {
         mobileView: { isMobile: false, menuOpen: false },
     },
     argTypes:{
-    //     mobileView: {
-    //   table: { disable: true },
-    //   control: false,
-    // },
+        mobileView: {
+      table: { disable: true },
+      control: false,
+    },
     }
 
 }
@@ -30,11 +30,10 @@ export const MobileView = {
             menuOpen:false
         }
     },
-    parameters: {
-        viewport: {
-            defaultViewport: 'iphone12',
-        },
-    },
+  globals: {
+    viewport: { value: 'mobile1', isRotated: false },
+  },
+    
 }
 
 export const MobileViewMenuOpen = {
@@ -44,9 +43,7 @@ export const MobileViewMenuOpen = {
       menuOpen: true,
     },
   },
-  parameters: {
-    viewport: {
-      defaultViewport: 'iphone12',
-    },
+  globals: {
+    viewport: { value: 'mobile1', isRotated: false },
   },
 }

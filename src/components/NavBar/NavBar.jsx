@@ -6,7 +6,7 @@ export const NavBar = ({
     brandName,
     mobileView,
     ...props}) =>{
-    let navClass = "main_nav";
+    let navClass = mobileView.isMobile ? "main_nav mobile_nav" : "main_nav";
     let menuClass = mobileView.isMobile && mobileView.menuOpen ? " menu_open" : "menu_closed";
     return(
         <nav 
@@ -19,7 +19,15 @@ export const NavBar = ({
             </div>
             <ul className={menuClass}>
                 <li>Home</li>
-                <li>Menu</li>
+                <li className="dropdown">
+                    <span className="dropdown-trigger">Menu</span>
+                    <ul className="dropdown-menu">
+                        <li>All Coffee</li>
+                        <li>Single Origin</li>
+                        <li>Espresso</li>
+                        <li>Coffee Mugs</li>
+                    </ul>
+                </li>
                 <li>About</li>
                 <li>Contact</li>
             </ul>

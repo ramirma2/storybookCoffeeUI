@@ -1,28 +1,27 @@
-
-@media (max-width:768px){
-
-    .main_nav{
+/* Mobile styles - media query for real devices */
+@media (max-width: 768px) {
+    .main_nav {
         flex-direction: column;
-        /* align-items: center; */
         height: 15%;
-        padding: var(--spacing-md) var(--spacing-sm) 
+        padding: var(--spacing-md) var(--spacing-sm);
     }
     
-    .nav_header{
+    .nav_header {
         display: flex;
         justify-content: flex-start;
-        width:100%
+        width: 100%;
     }
 
-    .main_nav h1{
+    .main_nav h1 {
         text-align: center;
         font-size: var(--font-fontSizes-large);
         padding: 0px;
-        margin:0px;
+        margin: 0px;
         flex-grow: 3;
         padding-right: var(--spacing-md);
     }
-    .main_nav ul{
+
+    .main_nav ul {
         flex-direction: column;
         width: 100%;
         align-items: center;
@@ -30,14 +29,14 @@
         padding: var(--spacing-sm);
     }
 
-    .main_nav ul li{
-        width:100%;
+    .main_nav ul li {
+        width: 100%;
         text-align: left;
         padding: var(--spacing-xs) 0px;
         font-size: var(--font-fontSizes-small);
     }
 
-    .menu_open{
+    .menu_open {
         display: flex;
         flex-direction: column;
         width: 100%;
@@ -45,9 +44,56 @@
         margin-top: var(--spacing-sm);
     }
 
-    .menu_closed{
+    .menu_closed {
         display: none;
     }
+}
 
+/* Mobile styles - class for Storybook */
+.main_nav.mobile_nav {
+    flex-direction: column;
+    height: 15%;
+    padding: var(--spacing-md) var(--spacing-sm);
+}
 
+.mobile_nav .nav_header {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+.mobile_nav h1 {
+    text-align: center;
+    font-size: var(--font-fontSizes-large);
+    padding: 0px;
+    margin: 0px;
+    flex-grow: 3;
+    padding-right: var(--spacing-md);
+}
+
+.mobile_nav ul {
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    margin-top: var(--spacing-sm);
+    padding: var(--spacing-sm);
+}
+
+.mobile_nav ul li {
+    width: 100%;
+    text-align: left;
+    padding: var(--spacing-xs) 0px;
+    font-size: var(--font-fontSizes-small);
+}
+
+.mobile_nav .menu_open {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    margin-top: var(--spacing-sm);
+}
+
+.mobile_nav .menu_closed {
+    display: none;
 }

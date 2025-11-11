@@ -213,7 +213,49 @@
 
   .main_nav ul li:hover{
     text-decoration: underline;
+    cursor: pointer;
   }
+
+  /* Dropdowns */
+  .dropdown {
+    position: relative;
+}
+
+.dropdown-trigger {
+    cursor: pointer;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: var(--colors-light-merino-50);
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    min-width: 150px;
+    transform: scale(1,0);
+    transform-origin: top;
+    transition: 0.2s linear 50ms ease;
+}
+
+.dropdown:hover .dropdown-menu {
+
+    transform: scale(1,1);
+    display: flex;
+    flex-direction: column;
+    align-items: self-start;
+    padding-top: var(--spacing-sm);
+    background: var(--colors-light-merino-50);
+}
+
+.dropdown-menu li {
+    padding: var(--spacing-sm) var(--spacing-md);
+}
+
+.dropdown-menu li:hover {
+    background: var(--colors-light-merino-100);
+}
 
   /* Buttons */
   .button-sm {

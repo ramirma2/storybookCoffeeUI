@@ -1,0 +1,23 @@
+import { Meta, Story, Title, Canvas, Stories } from '@storybook/addon-docs/blocks';
+import * as NavBarStories from "./NavBar.stories.jsx";
+
+<Meta of={NavBarStories} />
+
+<Title>Navigation</Title>
+
+The **NavBar** component provides site-wide navigation and branding. It supports links, logos, responsive behavior, and a mobile toggle menu.
+
+## Examples
+
+
+<Stories/>
+
+## Responsive Behavior
+
+The NavBar automatically adapts at configured breakpoints (e.g., `768px`).  
+On smaller screens, the navigation collapses into a toggle button.  
+Make sure to include:
+
+- `aria-expanded` on the toggle button
+- `aria-controls` linking to the mobile menu container
+- keyboard accessibility for menu items

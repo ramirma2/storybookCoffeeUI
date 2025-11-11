@@ -33,6 +33,7 @@ export const MobileView = {
   globals: {
     viewport: { value: 'mobile1', isRotated: false },
   },
+  
     
 }
 
@@ -43,7 +44,9 @@ export const MobileViewMenuOpen = {
       menuOpen: true,
     },
   },
+
   globals: {
     viewport: { value: 'mobile1', isRotated: false },
-  },
+  }
+  
 }

@@ -1,13 +1,18 @@
+import { useState } from 'react';
+
 import './NavBar.css'
 import { Menu, X } from 'lucide-react';
 
 
-export const NavBar = ({
-    brandName,
-    mobileView,
-    ...props}) =>{
+export function NavBar ({brandName, mobileView,...props}){
+    const [mobileMenu, setMobileMenu] = useState(mobileView.menuOpen)
+
+    const toggleMobileMenu = () => {
+        setMobileMenu(!mobileMenu)
+    }
+
     let navClass = mobileView.isMobile ? "main_nav mobile_nav" : "main_nav";
-    let menuClass = mobileView.isMobile && mobileView.menuOpen ? " menu_open" : "menu_closed";
+    let menuClass = mobileMenu ? " menu_open" : "menu_closed";
     let brand = brandName;
     let brand_sec="";
     if (typeof brandName == 'string' ){
@@ -22,16 +27,15 @@ export const NavBar = ({
         className={navClass}
         {...props}>
             <div className='nav_header'>
-            {mobileView.isMobile && (
                 <button
                 className="menu_toggle"
                 aria-label="Toggle navigation menu"
                 aria-expanded={mobileView.menuOpen}
-                // onClick={toggleMobileMenu}
+                onClick={toggleMobileMenu}
                 >
-                {mobileView.menuOpen ? <X size={24} /> : <Menu size={24} />}
+                {mobileMenu ? <X size={24} /> : <Menu size={24} />}
                 </button>
-            )}
+
                 <div className="logo">
                     <h1>{brand}</h1>
                     {brand_sec ? <h3>{brand_sec}</h3> : null}
@@ -64,3 +68,4 @@ export const NavBar = ({
         </nav>
     )
 }
+

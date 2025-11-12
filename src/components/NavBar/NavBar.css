@@ -47,6 +47,14 @@
         font-size: var(--font-fontSizes-small);
     }
 
+    .menu_toggle {
+        background: none;
+        border: none;
+        cursor: pointer;
+        display: flex;
+        color: var(--colors-dark-mondo-lightdark);
+    }
+
     .menu_open {
         display: flex;
         flex-direction: column;
@@ -58,12 +66,19 @@
     .menu_closed {
         display: none;
     }
+
+    .dropdown-trigger{
+        margin-bottom: 0;
+    }
+    .dropdown-menu{
+        margin-top: 0px;
+    }
 }
 
 /* Mobile styles - class for Storybook */
 .main_nav.mobile_nav {
     flex-direction: column;
-    height: 15%;
+    height: 3.5rem;
     padding: var(--spacing-md) var(--spacing-sm);
 }
 
@@ -106,14 +121,31 @@ margin-top: 0;
     font-size: var(--font-fontSizes-small);
 }
 
+.mobile_nav .menu_toggle {
+    background: none;
+    cursor: pointer;
+    display: flex;
+    color: var(--colors-dark-mondo-lightdark);
+    border:none
+    }
+
 .mobile_nav .menu_open {
+    position: absolute;
+    top:3rem;
+    left:0;
     display: flex;
     flex-direction: column;
-    width: 100%;
+    width: 30%;
     align-items: center;
     margin-top: var(--spacing-sm);
+    padding:var(--spacing-md) var(--spacing-md);
+    background-color: var(--colors-light-merino-50);
 }
 
 .mobile_nav .menu_closed {
     display: none;
+}
+
+.mobile_nav .dropdown-menu{
+        margin-top: 0px;
 }

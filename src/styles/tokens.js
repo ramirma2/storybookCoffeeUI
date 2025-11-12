@@ -83,11 +83,11 @@ export const typography = {
 };
 
 export const spacing = {
-  xs: "4px",
-  sm: "8px",
-  md: "16px",
-  lg: "24px",
-  xl: "48px",
+  xs: "0.25rem",  // 4px
+  sm: "0.5rem",   // 8px
+  md: "1rem",     // 16px
+  lg: "1.5rem",   // 24px
+  xl: "3rem",     // 48px
 };
 
 export const radius = {

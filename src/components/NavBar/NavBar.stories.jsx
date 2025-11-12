@@ -1,4 +1,6 @@
+import { expect } from 'storybook/test';
 import {NavBar} from "./NavBar";
+
 
 const meta = {
     title: 'Components/NavBar',
@@ -11,9 +13,13 @@ const meta = {
         mobileView: { isMobile: false, menuOpen: false },
     },
     argTypes:{
+        brandName:{
+            control: 'text',
+            description: 'The coffee shop brand name displayed in the navbar'
+        },
         mobileView: {
-      table: { disable: true },
-      control: false,
+        table: { disable: true },
+        control: false,
     },
     }
 
@@ -21,7 +27,21 @@ const meta = {
 
 export default meta;
 
-export const Default = {}
+export const Default = {
+    play: async( {canvas, userEvent}) => {
+        await userEvent.hover(canvas.getByTestId('dropdown'));
+
+        await expect(canvas.getByRole('list',{name:"Coffee menu options"})).toBeVisible()
+    }
+};
+
+export const DesktopLongBrand = {
+    args:{
+        brandName: "Kafe and Cake",
+    }
+};
+
+
 
 export const MobileView = {
     args:{

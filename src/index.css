@@ -87,6 +87,15 @@
     background-color: var(--colors-light-merino-100);
     padding:0;
   }
+  h1{
+    font-size: var(--font-fontSizes-heading);
+  }
+  h2{
+    font-size: var(--font-fontSizes-base);
+  }
+  h3{
+    font-size: var(--font-fontSizes-small);
+  }
   h1, h2, h3{
     font-family: 'Playfair Display SC', serif;
     font-weight: 400;
@@ -198,12 +207,21 @@
     padding-bottom: var(--spacing-sm);
   }
 
-  .main_nav h1{
-    text-align: left;
-    padding-bottom: var(--spacing-md);
+  .logo{
+    margin-bottom: var(--spacing-md);
     margin-left: var(--spacing-lg); 
-
+    padding-top: var(--spacing-sm);
   }
+
+  .logo h1{
+    text-align: center;
+    font-size: var(--font-fontSizes-heading);
+  }
+
+  .logo h3{
+    margin-top: 0;
+  }
+
 
   .main_nav ul li{
     /* align-self:last-baseline; */
@@ -222,7 +240,20 @@
 }
 
 .dropdown-trigger {
-    cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+  font: inherit;
+  color: var(--colors-dark-mondo-lightdark);
+  cursor: pointer;
+}
+
+.menu_toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  color: var(--colors-dark-mondo-lightdark);
 }
 
 .dropdown-menu {

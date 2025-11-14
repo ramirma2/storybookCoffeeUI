@@ -41,7 +41,8 @@ export function NavBar ({brandName, mobileView,...props}){
                     {brand_sec ? <h3>{brand_sec}</h3> : null}
                 </div>
             </div>
-            <ul className={menuClass}>
+            <ul className={menuClass}
+            aria-label="nav menu options">
                 <li>Home</li>
                 <li className="dropdown">
                     <button 

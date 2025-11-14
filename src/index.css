@@ -160,33 +160,35 @@
 @layer components{
   /* Cards for displaying menu items */
   .card{
-    padding: var(--spacing-lg);
-    max-width: 400px;
-    height: 600px
+    width: 280px;
+    height: 420px
   }
 
   .card img{
-    width:350px;
-    height: 400px;
+    width:280px;
+    height: 330px;
   }
   .card h3{
     padding-left:var(--spacing-xs);
     margin-top: var(--spacing-md);
-    size: var(--font-fontSizes-base);
+    font-size: var(--font-fontSizes-base);
     color: var(--font-fontColors-primary);
   }
   .card p{
     padding-left:var(--spacing-xs);
-    size: var(--font-fontSizes-small);
+    font-size: var(--font-fontSizes-small);
     margin-top: var(--spacing-xs);
     font-weight: var(--font-weights-light);
   }
 
   .card .card-header{
-    padding-right: var(--spacing-md);
     display: flex;
     justify-content: space-between;
     align-items: baseline;
+  }
+  .card .card-header p{
+    padding-right: var(--spacing-sm);
+    font-size: var(--font-fontSizes-base);
   }
 
   /* Navigation */
@@ -196,6 +198,7 @@
     margin:0px;
     display: flex;
     justify-content: space-between;
+    
   }
 
   .main_nav ul{

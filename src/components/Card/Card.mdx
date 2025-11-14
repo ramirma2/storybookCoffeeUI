@@ -1,4 +1,4 @@
-import { Meta, Title, Stories, Story, Controls, Canvas } from "@storybook/addon-docs/blocks";
+import { Meta, Title, Primary, Story, Stories,Controls, Canvas } from "@storybook/addon-docs/blocks";
 
 import * as CardStories from './Card.stories';
 
@@ -14,7 +14,6 @@ The **Product Card** displays key information about a product — typically an i
 - To provide a quick preview before navigating to a detailed product page.  
 - When you need a consistent layout for displaying multiple products.
 
-<Controls/>
 
 ---
 
@@ -23,18 +22,36 @@ The **Product Card** displays key information about a product — typically an i
 
 ### Default
 
-<Canvas>
-    <Story of={CardStories.Default} />
-</Canvas>
+<Primary/>
 
-### Longer description
+## Props
 
+<Controls/>
 
-    <Story of={CardStories.LongDescription} />
+<Stories/>
 
+## Accessibility
 
-### No image
+### Semantic HTML
+- Uses proper heading hierarchy (`<h3>` for product name)
+- Card content wrapped in `<article>` or semantic container
 
-    <Story of={CardStories.NoImage} />   
+### Images
+- All product images include descriptive `alt` text
+- Alt text describes the product (e.g., "Ethiopian single origin coffee bag")
+- Decorative images should use `alt=""` to hide from screen readers
 
+### Color and Contrast
+- Text meets WCAG AA contrast ratios (4.5:1 for normal text, 3:1 for large text)
+- Price and product information remain readable
+- Don't rely on color alone to convey information (e.g., "Sale" badges)
 
+### Keyboard Navigation
+- All interactive elements accessible via keyboard (Tab key)
+- Logical tab order follows visual layout
+- Enter/Space activates buttons
+
+### Screen Reader Support
+- Product availability announced (e.g., "Out of stock")
+- Sale prices include original price for context
+- Use `aria-label` for additional context if needed (e.g., "Add Ethiopian Coffee to cart")

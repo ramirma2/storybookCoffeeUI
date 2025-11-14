@@ -53,8 +53,13 @@ export const MobileView = {
   globals: {
     viewport: { value: 'mobile1', isRotated: false },
   },
-  
-    
+    play: async ({canvas, userEvent}) => {
+    await userEvent.click(canvas.getByLabelText("Toggle navigation menu"));
+
+    await expect(
+      canvas.getByRole(
+        'list', {name:"nav menu options"} )).toBeVisible()
+  }
 }
 
 export const MobileViewMenuOpen = {
@@ -67,6 +72,7 @@ export const MobileViewMenuOpen = {
 
   globals: {
     viewport: { value: 'mobile1', isRotated: false },
-  }
+  },
+
   
 }

@@ -3,6 +3,9 @@ import {Input} from "./Input";
 const meta = {
     title : 'Components/Input',
     component: Input,
+    parameters: {
+        layout: 'centered', 
+    },
     args:{
         label: 'Input Label',
         type: 'text',

@@ -8,17 +8,21 @@ const meta = {
     },
     args:{
         label: 'Input Label',
-        type: 'text',
+        type: 'email',
         placeholder: 'Enter text here',
         required: false,
         disabled: false,
-        error:false
+        error:''
     },
     argTypes:{
         type:{
             control:'select',
             options: ['text', 'email', 'password', 'number'],
         },
+        error: {
+        control: 'text',
+        description: 'Error message to display'
+    }
     },
 }
 
@@ -26,18 +30,27 @@ export default meta;
 
 export const Default = {
     args:{
-        type: 'text',
+        type: 'email',
         placeholder: 'Sign up for rewards',
         label: 'Email',
     }
 }
 
-export const ErrorState = {
-    args:{
-        type: 'text',
-        placeholder: 'Sign up for rewards',
-        label: 'Email',
-        required: true,
-        error: true,
-    }
-}
+export const ErrorRequired = {
+  args: {
+    label: 'Email',
+    type: 'email',
+    placeholder: 'Enter your email',
+    required: true,
+    error: 'This field is required.'
+  }
+};
+
+export const ErrorInvalidEmail = {
+  args: {
+    label: 'Email',
+    type: 'email',
+    placeholder: 'Enter your email',
+    error: 'Please enter a valid email address.'
+  }
+};

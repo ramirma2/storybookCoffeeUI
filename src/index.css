@@ -107,7 +107,7 @@
   .button{
     cursor: pointer;
     border: none;
-    background: var(--colors-primary-juniper-400);;
+    background: var(--colors-primary-juniper-500);
     padding: var(--spacing-md) var(--spacing-lg);
     border-radius: var(--radius-md);
     color: white;
@@ -307,13 +307,13 @@
 
   /* Buttons Variant: secondary */
   .button-secondary{
-    background-color: var(--colors-success-norway-300);
+    background-color: var(--colors-success-norway-600);
   }
   /* Buttons Variant: outline */
   .button-outline{
     background-color: transparent;
-    border: 2px solid var(--colors-primary-juniper-400);
-    color: var(--colors-primary-juniper-400);
+    border: 2px solid var(--colors-primary-juniper-500);
+    color: var(--colors-primary-juniper-500);
   }
   /* Buttons Variant: outline */
   .button-destructive{

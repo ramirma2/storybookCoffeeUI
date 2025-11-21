@@ -38,7 +38,7 @@ export function NavBar ({brandName, mobileView,...props}){
 
                 <div className="logo">
                     <h1>{brand}</h1>
-                    {brand_sec ? <h3>{brand_sec}</h3> : null}
+                    {brand_sec ? <h2>{brand_sec}</h2> : null}
                 </div>
             </div>
             <ul className={menuClass}

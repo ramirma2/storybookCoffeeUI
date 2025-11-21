@@ -1,9 +1,13 @@
 import { Meta, Story, Title, Canvas, Stories } from '@storybook/addon-docs/blocks';
 import * as NavBarStories from "./NavBar.stories.jsx";
 
-<Meta of={NavBarStories} />
+<Meta 
+    of={NavBarStories}
+     />
 
-<Title>Navigation</Title>
+<Title>Main Navigation</Title>
+
+<Canvas of={NavBarStories.Default} />
 
 The **NavBar** component provides site-wide navigation and branding. It supports links, logos, responsive behavior, and a mobile toggle menu.
 

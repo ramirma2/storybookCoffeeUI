@@ -25,6 +25,7 @@ export const Input = ({
             placeholder={placeholder}
             disabled={disabled}
             required={required}
+            aria-label={label}
             aria-invalid={!!error}
             aria-describedby={error ? "error-message" : undefined}
             {...props}

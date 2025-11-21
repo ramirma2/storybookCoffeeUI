@@ -29,6 +29,7 @@ export default meta;
 
 export const Default = {
     play: async( {canvas, userEvent}) => {
+      console.log(canvas)
         await userEvent.hover(canvas.getByTestId('dropdown'));
 
         await expect(canvas.getByRole('list',{name:"Coffee menu options"})).toBeVisible()
@@ -50,9 +51,7 @@ export const MobileView = {
             menuOpen:false
         }
     },
-  globals: {
-    viewport: { value: 'mobile1', isRotated: false },
-  },
+    
     play: async ({canvas, userEvent}) => {
     await userEvent.click(canvas.getByLabelText("Toggle navigation menu"));
 

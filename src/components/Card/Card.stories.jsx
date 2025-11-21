@@ -7,7 +7,7 @@ const meta =  {
         layout: 'centered', 
     },
     args:{
-        image: 'https://images.unsplash.com/photo-1511920170033-f8396924c348?w=400',
+        image: 'https://images.unsplash.com/photo-1579992357154-faf4bde95b3d?w=250',
         title: 'Espresso',
         description: 'Medium Roast.',
         price: '20.99'

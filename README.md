@@ -1,16 +1,88 @@
-# React + Vite
+# ☕ Coffee Shop UI Kit
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A reusable UI component library built with **React**, **Vite**, and **Storybook**, designed with a warm, modern coffee-shop aesthetic.  
+This project demonstrates design-system thinking through reusable components, centralized design tokens, and fully documented UI patterns.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✨ Features
 
-## React Compiler
+- **Reusable React Components**  
+  Button, Product Card, Input, Navbar, and more.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Design Tokens**  
+  Centralized colors, typography, spacing, and shadows (`src/styles/tokens.js`).
 
-## Expanding the ESLint configuration
+- **Global Styling**  
+  Base styling and CSS variables (`src/index.css`).
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **Typography System**  
+  Integrated with `@fontsource` for Playfair Display SC and Inter.
+
+- **Storybook Documentation**  
+  Every component includes:
+  - Interactive stories  
+  - Built-in controls  
+  - MDX documentation (usage, variations, guidel
+
+- **Scalable Architecture**  
+  Component-driven folder structure for easy maintenance and extension.
+
+  ---
+
+## Components Included
+
+Button – Primary, Secondary, Outline, and Destructive variants
+
+Product Card – Image, title, and description
+
+Input – Labeled text input
+
+Navbar – Simple top navigation layout
+
+Each component resides in its own folder with:
+
+Component.jsx
+
+Component.stories.jsx
+
+Component.mdx (documentation)
+
+## Design Tokens
+
+All design tokens live in:
+
+src/styles/tokens.js
+
+Tokens include:
+
+Color palette
+
+Typography scale
+
+Font families
+
+Spacing
+
+Shadows & radii
+
+Tokens are automatically converted into CSS variables for consistent theming.
+
+
+## Purpose
+
+This UI Kit was built to practice:
+
+Component architecture
+
+Design system organization
+
+Storybook documentation
+
+Token-based styling
+
+Creating accessible and reusable UI patterns
+
+## License
+
+MIT License

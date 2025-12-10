@@ -32,39 +32,42 @@ This project demonstrates design-system thinking through reusable components, ce
 
 ## Components Included
 
-Button – Primary, Secondary, Outline, and Destructive variants
+    - Button – Primary, Secondary, Outline, and Destructive variants
 
-Product Card – Image, title, and description
+    - Product Card – Image, title, and description
 
-Input – Labeled text input
+    - Input – Labeled text input
 
-Navbar – Simple top navigation layout
+    - Navbar – Simple top navigation layout
 
-Each component resides in its own folder with:
+    Each component resides in its own folder with:
 
-Component.jsx
+        - Component.jsx
 
-Component.stories.jsx
+        - Component.stories.jsx
 
-Component.mdx (documentation)
+        - Component.mdx (documentation)
 
 ## Design Tokens
 
 All design tokens live in:
 
+``` bash
+
 src/styles/tokens.js
+```
 
-Tokens include:
+**Tokens include:**
 
-Color palette
+    - Color palette
 
-Typography scale
+    - Typography scale
 
-Font families
+    - Font families
 
-Spacing
+    - Spacing
 
-Shadows & radii
+    - Shadows & radii
 
 Tokens are automatically converted into CSS variables for consistent theming.
 
@@ -73,15 +76,15 @@ Tokens are automatically converted into CSS variables for consistent theming.
 
 This UI Kit was built to practice:
 
-Component architecture
+    -   Component architecture
 
-Design system organization
+    -  Design system organization
 
-Storybook documentation
+    -  Storybook documentation
 
-Token-based styling
+    -  Token-based styling
 
-Creating accessible and reusable UI patterns
+    -  Creating accessible and reusable UI patterns
 
 ## License
 
